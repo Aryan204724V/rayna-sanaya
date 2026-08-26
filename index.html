@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For My Favourite Little Sister ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Pacifico&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="hearts" aria-hidden="true"></div>
+
+  <main class="book">
+    <section class="hero page">
+      <div class="tiny">A little website made just for you ✨</div>
+      <h1>Happy<br><span>Rakshabandhan</span> 🧿</h1>
+      <p class="subtitle">To my favourite little sister — thank you for filling my life with laughter, love, mischief
+        and unforgettable memories. ❤️</p>
+      <button class="primary" data-next="intro">Open my surprise 💌</button>
+      <div class="hint">Tap the buttons • there are a few surprises inside</div>
+    </section>
+
+    <section id="intro" class="page hidden">
+      <div class="card">
+        <div class="scribble">I made something for you...</div>
+        <h2>Do you wanna see it? 👀</h2>
+        <div class="button-row">
+          <button class="yes" data-next="gifts">YES ❤️</button>
+          <button class="no" id="noBtn">NO 😭</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="gifts" class="page hidden">
+      <div class="section-head">
+        <span>01</span>
+        <h2>Each gift has something for you 🎁</h2>
+        <p>Open them one by one.</p>
+      </div>
+      <div class="gifts">
+        <button class="gift" data-message="For all the times you made me smile. 🫶">🎁<small>Support</small></button>
+        <button class="gift"
+          data-message="For every silly moment, laugh and memory we share. 😂">🎁<small>Memories</small></button>
+        <button class="gift" data-message="For the little sister who deserves the biggest hug. ❤️">🎁<small>Thank
+            you</small></button>
+      </div>
+      <button class="primary" data-next="award">Continue →</button>
+    </section>
+
+    <section id="award" class="page hidden">
+      <div class="award">
+        <div class="medal">🏅</div>
+        <p class="eyebrow">Presented with unlimited love</p>
+        <h2>Best Little Sister<br>Award</h2>
+        <div class="award-name">To: <strong>Rayna & Sanaya</strong></div>
+        <p>For being cute, funny, annoying, caring and somehow always making every day more fun.</p>
+        <div class="seal">CERTIFIED<br>BEST LITTLE SISTER</div>
+      </div>
+      <button class="primary" data-next="memories">See our memories →</button>
+    </section>
+
+    <section id="memories" class="page hidden">
+      <div class="section-head">
+        <span>02</span>
+        <h2>Memories 📸</h2>
+        <p>Some little moments with my little sister, saved forever.</p>
+      </div>
+      <div class="gallery">
+        <button class="photo" data-img="assets/page-5.jpg"><img src="assets/page-5.jpg" alt="Memory 1"></button>
+        <button class="photo" data-img="assets/page-6.jpg"><img src="assets/page-6.jpg" alt="Memory 2"></button>
+        <button class="photo" data-img="assets/page-7.jpg"><img src="assets/page-7.jpg" alt="Memory 3"></button>
+        <button class="photo" data-img="assets/page-8.jpg"><img src="assets/page-8.jpg" alt="Memory 4"></button>
+      </div>
+      <button class="primary" data-next="youaremy">Next →</button>
+    </section>
+
+    <section id="youaremy" class="page hidden">
+      <div class="you-card">
+        <p class="eyebrow">YOU ARE MY</p>
+        <div class="word-cloud">
+          <span>little sunshine</span><span>bestie</span><span>food buddy</span>
+          <span>partner in crime</span><span>favourite person</span><span>laugh partner</span>
+          <span>secret keeper</span><span>my little star</span>
+        </div>
+        <div class="big-heart">❤️</div>
+      </div>
+      <button class="primary" data-next="letter">One last thing →</button>
+    </section>
+
+    <section id="letter" class="page hidden">
+      <div class="letter">
+        <div class="tape"></div>
+        <p class="eyebrow">A tiny letter</p>
+        <h2>To my amazing little sister ❤️</h2>
+        <p>
+          I may not say it every day, but I’m genuinely lucky to have you as my little sister.
+          Thank you for all the silly fights, endless laughs, random conversations,
+          little surprises and for making even ordinary days feel special.
+        </p>
+        <p>Whatever happens, you’ll always have a big brother who will protect you, tease you and be proud to call you
+          his little sister. 🫶</p>
+        <div class="signature">— Your favourite big brother</div>
+      </div>
+      <button class="primary" id="replay">Replay from the beginning ↻</button>
+    </section>
+  </main>
+
+  <div class="toast" id="toast"></div>
+
+  <div class="lightbox hidden" id="lightbox">
+    <button class="close" id="closeLightbox">×</button>
+    <img id="lightboxImg" alt="Selected memory">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

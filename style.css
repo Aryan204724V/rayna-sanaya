@@ -1,0 +1,48 @@
+*{box-sizing:border-box}
+:root{
+  --red:#b51f2a;--deep:#74141d;--cream:#fff9ee;--paper:#fffdf8;
+  --ink:#3b2222;--pink:#f4b8b1;--line:#e7b5aa;
+}
+html,body{margin:0;min-height:100%;font-family:"DM Sans",sans-serif;color:var(--ink);background:
+  repeating-linear-gradient(0deg,#b51f2a 0 10px,#d93b42 10px 16px,#9f1721 16px 25px);
+}
+body{display:grid;place-items:center;padding:28px 14px;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;background:radial-gradient(circle at 15% 10%,#fff4 0 2px,transparent 3px),radial-gradient(circle at 80% 35%,#fff3 0 2px,transparent 3px);pointer-events:none}
+.book{width:min(100%,760px);position:relative}
+.page{min-height:760px;border:8px solid #fff3e5;border-radius:22px;padding:38px clamp(22px,6vw,64px);background:
+  linear-gradient(#fff9 1px,transparent 1px),var(--paper);
+  background-size:100% 12px;box-shadow:0 18px 45px #4b0c1480;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.hidden{display:none!important}
+.hero{background:linear-gradient(#fff9,#fff9),repeating-linear-gradient(45deg,#fff7ed 0 10px,#ffeae5 10px 20px)}
+.tiny,.eyebrow{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--red)}
+h1,h2{font-family:Pacifico,cursive;font-weight:400;color:var(--red);line-height:1.1}
+h1{font-size:clamp(3.2rem,10vw,6.5rem);margin:18px 0}
+h1 span{font-size:.72em}
+h2{font-size:clamp(2rem,6vw,3.6rem);margin:12px 0}
+.subtitle{max-width:560px;font-size:1.05rem;line-height:1.75}
+.hint{margin-top:18px;font-size:.78rem;opacity:.6}
+.primary,.yes,.no{border:0;border-radius:999px;padding:15px 25px;font-weight:800;font-size:1rem;cursor:pointer;transition:.2s transform,.2s box-shadow}
+.primary,.yes{background:var(--red);color:#fff;box-shadow:0 8px 0 #73131c}
+.no{background:#f4ddd8;color:var(--red)}
+.primary:hover,.yes:hover,.no:hover,.gift:hover{transform:translateY(-3px)}
+.card,.letter,.award,.you-card{width:min(100%,590px);padding:42px 28px;border:2px solid var(--line);border-radius:26px;background:#fffdf8;box-shadow:inset 0 0 0 7px #fff3e9,0 14px 30px #64131c1a}
+.scribble{font-family:Pacifico;color:var(--red);font-size:clamp(1.5rem,5vw,2.4rem)}
+.button-row{display:flex;gap:16px;justify-content:center;margin-top:24px}
+.section-head{width:100%;margin-bottom:26px}.section-head span{font-weight:800;color:var(--red)}.section-head p{opacity:.65}
+.gifts{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;width:100%;margin:15px 0 35px}
+.gift{background:#fff;border:2px dashed var(--red);border-radius:22px;padding:28px 12px;font-size:3.5rem;cursor:pointer;transition:.2s}
+.gift small{display:block;font-size:.8rem;color:var(--red);font-weight:800;margin-top:8px}
+.award{position:relative;overflow:hidden}.award:before,.award:after{content:"✦";position:absolute;font-size:4rem;color:#e5b94e;opacity:.55}.award:before{left:18px;top:12px}.award:after{right:18px;bottom:12px}
+.medal{font-size:3.5rem}.award p{line-height:1.7;max-width:480px;margin:18px auto}.award-name{margin:12px;font-size:1.2rem}.seal{display:inline-grid;place-items:center;border:3px double var(--red);border-radius:50%;width:110px;height:110px;font-size:.7rem;font-weight:900;color:var(--red);transform:rotate(-10deg)}
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;width:100%;margin-bottom:30px}
+.photo{border:5px solid #fff;border-radius:18px;box-shadow:0 8px 20px #4b0c1420;padding:0;background:#fff;cursor:pointer;overflow:hidden;aspect-ratio:4/3}
+.photo img{width:100%;height:100%;object-fit:cover;display:block;transition:.3s}.photo:hover img{transform:scale(1.04)}
+.you-card{min-height:380px;display:flex;flex-direction:column;justify-content:center}.word-cloud{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:18px auto;max-width:520px}.word-cloud span{padding:8px 12px;background:#ffe2dc;border-radius:999px;color:var(--red);font-weight:700}.big-heart{font-size:5rem;animation:pulse 1.4s infinite}
+.letter{text-align:left;position:relative}.letter h2{text-align:center}.letter p{line-height:1.8}.signature{text-align:right;font-family:Pacifico;color:var(--red);margin-top:28px}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);background:#3b1519;color:#fff;padding:13px 18px;border-radius:999px;opacity:0;pointer-events:none;transition:.25s;z-index:20}.toast.show{opacity:1;transform:translate(-50%,0)}
+.lightbox{position:fixed;inset:0;background:#1b080ce8;display:grid;place-items:center;padding:30px;z-index:30}.lightbox img{max-width:min(920px,95vw);max-height:85vh;border:7px solid #fff;border-radius:16px}.close{position:fixed;top:18px;right:20px;border:0;background:#fff;color:var(--red);width:46px;height:46px;border-radius:50%;font-size:2rem;cursor:pointer}
+.hearts{position:fixed;inset:0;pointer-events:none;z-index:0}.heart{position:absolute;bottom:-30px;animation:float 7s linear forwards;font-size:18px;opacity:.7}
+.book{z-index:1}
+@keyframes float{to{transform:translateY(-110vh) rotate(20deg);opacity:0}}
+@keyframes pulse{50%{transform:scale(1.1)}}
+@media(max-width:600px){body{padding:10px 7px}.page{min-height:690px;padding:28px 16px}.gifts{gap:8px}.gift{font-size:2.6rem;padding:22px 6px}.gallery{gap:10px}.card,.letter,.award,.you-card{padding:28px 18px}}
